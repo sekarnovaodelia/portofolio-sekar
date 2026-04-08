@@ -25,6 +25,7 @@ export const Contact = () => {
         }),
         emailLabel: t({ en: "Email", id: "Email" }),
         phoneLabel: t({ en: "Phone", id: "Telepon" }),
+        githubLabel: t({ en: "GitHub", id: "GitHub" }),
         formName: t({ en: "Name", id: "Nama" }),
         formEmail: t({ en: "Email", id: "Email" }),
         formSubject: t({ en: "Subject", id: "Subjek" }),
@@ -86,26 +87,38 @@ export const Contact = () => {
                             </p>
 
                             <div className="space-y-6">
-                                <div className="flex items-center gap-4">
+                                <div className="flex items-center gap-4 p-4 rounded-lg">
                                     <div className="size-12 rounded-xl bg-background-light dark:bg-background-dark flex items-center justify-center text-primary">
                                         <span className="material-symbols-outlined">mail</span>
                                     </div>
                                     <div>
                                         <p className="text-sm font-medium text-text-muted">{content.emailLabel}</p>
-                                        <a href="mailto:sekarnovaodelia@gmail.com" className="text-lg font-bold text-text-main dark:text-white hover:text-primary transition-colors">
+                                        <a href="mailto:sekarnovaodelia@gmail.com" className="text-lg font-bold text-text-main dark:text-white hover:text-primary hover:underline transition-all duration-300 cursor-pointer">
                                             sekarnovaodelia@gmail.com
                                         </a>
                                     </div>
                                 </div>
 
-                                <div className="flex items-center gap-4">
+                                <div className="flex items-center gap-4 p-4 rounded-lg">
                                     <div className="size-12 rounded-xl bg-background-light dark:bg-background-dark flex items-center justify-center text-primary">
                                         <span className="material-symbols-outlined">call</span>
                                     </div>
                                     <div>
                                         <p className="text-sm font-medium text-text-muted">{content.phoneLabel}</p>
-                                        <a href="https://wa.me/628956100908" target="_blank" rel="noopener noreferrer" className="text-lg font-bold text-text-main dark:text-white hover:text-primary transition-colors">
+                                        <a href="https://wa.me/628956100908" target="_blank" rel="noopener noreferrer" className="text-lg font-bold text-text-main dark:text-white hover:text-primary hover:underline transition-all duration-300 cursor-pointer">
                                             +62 895-6100-9908
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-center gap-4 p-4 rounded-lg">
+                                    <div className="size-12 rounded-xl bg-background-light dark:bg-background-dark flex items-center justify-center text-primary">
+                                        <span className="material-symbols-outlined">code</span>
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-medium text-text-muted">{content.githubLabel}</p>
+                                        <a href="https://github.com/sekarnovaodelia" target="_blank" rel="noopener noreferrer" className="text-lg font-bold text-text-main dark:text-white hover:text-primary hover:underline transition-all duration-300 cursor-pointer">
+                                            sekarnovaodelia 
                                         </a>
                                     </div>
                                 </div>
@@ -126,7 +139,7 @@ export const Contact = () => {
                                 </div>
                             )}
                             <form className="space-y-5" onSubmit={handleSubmit}>
-                                <div className="grid grid-cols-2 gap-5">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                                     <div className="space-y-2">
                                         <label htmlFor="name" className="text-sm font-medium text-text-main dark:text-white">{content.formName}</label>
                                         <input

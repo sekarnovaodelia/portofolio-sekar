@@ -45,14 +45,19 @@ export const Navbar = () => {
 
     const handleNavClick = (e, id) => {
         e.preventDefault();
-        const section = document.getElementById(id);
-        if (section) {
-            window.scrollTo({
-                top: section.offsetTop - 80, // account for navbar height
-                behavior: 'smooth'
-            });
-        }
-        setIsMobileMenuOpen(false);
+        setIsMobileMenuOpen(false); // Close menu first
+        
+        setTimeout(() => {
+            const section = document.getElementById(id);
+            if (section) {
+                const navHeight = 80;
+                const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+                window.scrollTo({
+                    top: sectionTop - navHeight,
+                    behavior: 'smooth'
+                });
+            }
+        }, 100); // Small delay to ensure menu closes before scroll
     };
 
     return (
@@ -144,7 +149,7 @@ export const Navbar = () => {
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        className="md:hidden bg-white/95 dark:bg-[#1a202c]/90 backdrop-blur-md border-t border-gray-300 dark:border-gray-800 overflow-hidden"
+                        className="md:hidden bg-white/95 dark:bg-[#1a202c]/90 backdrop-blur-md border-t border-gray-300 dark:border-gray-800 overflow-visible pointer-events-auto"
                     >
                         <div className="flex flex-col px-4 py-6 space-y-4">
                             {NAV_LINKS.map((link) => (
@@ -152,9 +157,9 @@ export const Navbar = () => {
                                     key={link.id}
                                     href={`#${link.id}`}
                                     onClick={(e) => handleNavClick(e, link.id)}
-                                    className={`text-base font-medium px-4 py-3 rounded-lg transition-colors ${activeSection === link.id
+                                    className={`text-base font-medium px-4 py-3 rounded-lg transition-colors cursor-pointer ${activeSection === link.id
                                         ? 'bg-primary/10 text-primary'
-                                        : 'text-gray-700 dark:text-text-muted hover:bg-gray-100 dark:hover:bg-surface-dark'
+                                        : 'text-gray-700 dark:text-text-muted hover:bg-gray-100 dark:hover:bg-surface-dark hover:text-primary'
                                         }`}
                                 >
                                     {link.label[language]}
@@ -164,7 +169,7 @@ export const Navbar = () => {
                                 <a
                                     href="/stok/CV_SEKAR.pdf"
                                     download="CV_SEKAR.pdf"
-                                    className="flex items-center justify-center h-12 w-full rounded-lg bg-primary text-white text-sm font-semibold"
+                                    className="flex items-center justify-center h-12 w-full rounded-lg bg-primary hover:bg-primary-dark text-white text-sm font-semibold transition-all"
                                 >
                                     {t({ en: 'Download CV', id: 'Unduh CV' })}
                                     <span className="material-symbols-outlined text-sm ml-2">download</span>
