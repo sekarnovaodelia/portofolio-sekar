@@ -115,7 +115,8 @@ export const Navbar = () => {
                         </div>
 
                         <a
-                            href="#"
+                            href="/stok/CV_SEKAR.pdf"
+                            download="CV_SEKAR.pdf"
                             className="hidden sm:inline-flex items-center justify-center h-10 px-5 rounded-lg bg-primary hover:bg-primary-dark text-white text-sm font-semibold transition-all shadow-sm shadow-primary/30"
                         >
                             {t({ en: 'Download CV', id: 'Unduh CV' })}
@@ -161,7 +162,8 @@ export const Navbar = () => {
                             ))}
                             <div className="pt-4 mt-2 border-t border-gray-300 dark:border-gray-800 px-4">
                                 <a
-                                    href="#"
+                                    href="/stok/CV_SEKAR.pdf"
+                                    download="CV_SEKAR.pdf"
                                     className="flex items-center justify-center h-12 w-full rounded-lg bg-primary text-white text-sm font-semibold"
                                 >
                                     {t({ en: 'Download CV', id: 'Unduh CV' })}

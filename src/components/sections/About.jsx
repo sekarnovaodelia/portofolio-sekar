@@ -12,17 +12,17 @@ export const About = () => {
 
     const timeline = [
         {
-            year: '2020',
+            year: '2023',
             title: t({ en: 'Started Coding', id: 'Mulai Coding' }),
             company: t({ en: 'Self Taught', id: 'Otodidak' }),
             description: t({
-                en: 'Began with HTML & CSS through online courses and tutorials.',
-                id: 'Memulai dengan HTML & CSS melalui kursus dan tutorial online.'
+                en: 'Began with HTML & CSS through online tutorials.',
+                id: 'Memulai dengan HTML & CSS melalui tutorial online.'
             }),
             active: false,
         },
                 {
-            year: '2021 - Present',
+            year: '2024 - Present',
             title: t({ en: 'Software Engineering Student', id: 'Siswa Rekayasa Perangkat Lunak' }),
             company: 'SMKN 4 Bandar Lampung',
             description: t({
