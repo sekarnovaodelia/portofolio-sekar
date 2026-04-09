@@ -7,8 +7,8 @@ export const Hero = () => {
     const content = {
         badge: t({ en: 'Available for Work', id: 'Tersedia untuk Pekerjaan' }),
         description: t({
-            en: <>A passionate <strong>Student Developer</strong> based in Bandar Lampung. Crafting seamless digital experiences with modern web technologies.</>,
-            id: <>Seorang <strong>Siswa Pengembang</strong> yang bersemangat, berbasis di Bandar Lampung. Menciptakan pengalaman digital yang mulus dengan teknologi web modern.</>
+            en: <>A dedicated <strong>Student Developer</strong> from Bandar Lampung, focused on building efficient, scalable, and user-centered web applications using modern technologies.</>,
+            id: <>Seorang <strong>Siswa Pengembang</strong> asal Bandar Lampung yang berfokus pada pengembangan aplikasi web yang efisien, skalabel, dan berorientasi pada pengalaman pengguna dengan teknologi modern.</>
         }),
         viewWork: t({ en: 'View Work', id: 'Lihat Karya' }),
         contactMe: t({ en: 'Contact Me', id: 'Hubungi Saya' }),
