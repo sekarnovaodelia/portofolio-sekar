@@ -105,7 +105,7 @@ export const Contact = () => {
                                     </div>
                                     <div>
                                         <p className="text-sm font-medium text-text-muted">{content.phoneLabel}</p>
-                                        <a href="https://wa.me/628956100908" target="_blank" rel="noopener noreferrer" className="text-lg font-bold text-text-main dark:text-white hover:text-primary hover:underline transition-all duration-300 cursor-pointer">
+                                        <a href="https://wa.me/62895610099808" target="_blank" rel="noopener noreferrer" className="text-lg font-bold text-text-main dark:text-white hover:text-primary hover:underline transition-all duration-300 cursor-pointer">
                                             +62 895-6100-99808
                                         </a>
                                     </div>

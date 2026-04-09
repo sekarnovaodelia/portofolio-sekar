@@ -73,7 +73,7 @@ export const Hero = () => {
                             />
                         </div>
 
-                        <div className="absolute -bottom-6 -left-6 bg-white dark:bg-surface-dark p-4 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 flex items-center gap-3 animate-bounce-slow">
+                        <div className="absolute -bottom-6 -left-6 md:-bottom-6 md:-left-6 bg-white dark:bg-surface-dark p-4 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 flex items-center gap-3 animate-bounce-slow translate-x-4 md:translate-x-0 translate-y-4 md:translate-y-0">
                             <div className="size-10 bg-primary-light dark:bg-primary/20 rounded-lg flex items-center justify-center text-primary dark:text-primary-light">
                                 <span className="material-symbols-outlined">code</span>
                             </div>
