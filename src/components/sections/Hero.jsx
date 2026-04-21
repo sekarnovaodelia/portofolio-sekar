@@ -66,7 +66,7 @@ export const Hero = () => {
 
                         <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-surface-dark bg-gray-100 dark:bg-gray-800">
                             <img
-                                src="/stok/sekar.png"
+                                src="/stok/sekar2.png"
                                 alt="Portrait of Sekar Nova Odelia"
                                 loading="lazy"
                                 className="w-full h-full object-cover"
